@@ -32,7 +32,7 @@ function createElements() {
     $( "#hr9" ).append(txt1, txt2, txt3);
   
     
-    if (workTableTime[index] < workTime && workTableTime[index] != workTime ) {
+    if (workTableTime[index] < workTime) {
       txt2.addClass( "past" );
     } else if (workTime < workTableTime[index]) {
       txt2.addClass( "future" );
