@@ -1,7 +1,33 @@
 let txt1; let txt2; let txt3;
 let Ind;
-
 const now = dayjs()
+
+//Get data from Local Storage
+function getLocalStorage() {
+  window.onload = function () {
+    
+        $("#txtArea0").html(localStorage.getItem("text0"));
+       
+        $("#txtArea1").append(localStorage.getItem("text1"));
+      
+        $("#txtArea2").append(localStorage.getItem("text2"));
+       
+        $("#txtArea3").append(localStorage.getItem("text3"));
+       
+        $("#txtArea4").append(localStorage.getItem("text4"));
+       
+        $("#txtArea5").append(localStorage.getItem("text5"));
+      
+        $("#txtArea6").append(localStorage.getItem("text6"));
+       
+        $("#txtArea7").append(localStorage.getItem("text7"));
+      
+        $("#txtArea8").append(localStorage.getItem("text8"));
+    }
+  
+  }
+  
+  getLocalStorage();
 
 //jquery to target the current day element 
 const currentDay = $("#currentDay")
@@ -57,28 +83,26 @@ $(document).ready(function () {
 
 });
 
+
 //Event Listener to Save User Input in Local Stotage
 $(document).ready(function () {
   $("button").on("click", function (event) {
       event.preventDefault;
-
+   
       let val;
-
+     
       switch (Ind) {
         case "txtArea0":
           val = $("#txtArea0").val();
           localStorage.setItem("text0", val);
-          $("#txtArea0").append(localStorage.getItem("text0"));
           break;
         case "txtArea1":
           val = $("#txtArea1").val();
           localStorage.setItem("text1", val);
-          $("#txtArea1").append(localStorage.getItem("text1"));
           break;
         case "txtArea2":
           val = $("#txtArea2").val();
           localStorage.setItem("text2", val);
-          $("#txtArea2").append(localStorage.getItem("text2"));
           break;
         case "txtArea3":
           val = $("#txtArea3").val();
@@ -110,12 +134,14 @@ $(document).ready(function () {
           localStorage.setItem("text8", val);
           $("#txtArea8").append(localStorage.getItem("text8"));
       }
-      
-  }
-  
-      );
+    
+  });
 
 });
+
+
+
+
 
 
 
