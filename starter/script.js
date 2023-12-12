@@ -35,7 +35,7 @@ const currentDay = $("#currentDay")
 
 //Function to generate current day
 const updateDate = () => {
-  const currentTime = now.format('MMMM D, YYYY HH:mm A');
+  const currentTime = now.format('MMMM D, YYYY hh:mm A');
   currentDay.text(currentTime);
 };
 updateDate();
