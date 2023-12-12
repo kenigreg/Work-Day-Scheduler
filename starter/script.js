@@ -32,6 +32,7 @@ function getLocalStorage() {
 //jquery to target the current day element 
 const currentDay = $("#currentDay")
 
+
 //Function to generate current day
 const updateDate = () => {
   const currentTime = now.format('MMMM D, YYYY HH:mm A');
@@ -107,32 +108,26 @@ $(document).ready(function () {
         case "txtArea3":
           val = $("#txtArea3").val();
           localStorage.setItem("text3", val);
-          $("#txtArea3").append(localStorage.getItem("text3"));
           break;
         case "txtArea4":
           val = $("#txtArea4").val();
           localStorage.setItem("text4", val);
-          $("#txtArea4").append(localStorage.getItem("text4"));
           break;
         case "txtArea5":
           val = $("#txtArea5").val();
           localStorage.setItem("text5", val);
-          $("#txtArea5").append(localStorage.getItem("text5"));
           break;
         case "txtArea6":
           val = $("#txtArea6").val();
           localStorage.setItem("text6", val);
-          $("#txtArea6").append(localStorage.getItem("text6"));
           break;
         case "txtArea7":
           val = $("#txtArea7").val();
           localStorage.setItem("text7", val);
-          $("#txtArea7").append(localStorage.getItem("text7"));
           break;
         case "txtArea8":
           val = $("#txtArea8").val();
           localStorage.setItem("text8", val);
-          $("#txtArea8").append(localStorage.getItem("text8"));
       }
     
   });
