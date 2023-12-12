@@ -42,9 +42,10 @@ updateDate();
 
 setInterval(updateDate, 1000);
 
+// Code for formatted current time for standard business hours
 const workTime = now.format('h A');
 
-
+// Code for Timeblock for standard business hours
 const workTableTime = ['9 AM', '10 AM', '11 AM', '12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM'];
 
 
@@ -58,7 +59,7 @@ function createElements() {
     txt3 = $("<button></button>").addClass("btn saveBtn col-md-1").attr("id", "btn").text("Save");
     $( "#hr9" ).append(txt1, txt2, txt3);
   
-    
+//Code to apply Color code to the timeblock for past, present, and future events
     if (workTableTime[index] < workTime) {
       txt2.addClass( "past" );
     } else if (workTime < workTableTime[index]) {
@@ -66,8 +67,6 @@ function createElements() {
     } else txt2.addClass("present");
     
   })
-
-  
 }
 createElements();
 
